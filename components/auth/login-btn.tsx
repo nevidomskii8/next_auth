@@ -2,14 +2,15 @@
 
 import { useRouter } from "next/navigation";
 
-interface LoginBtnProps {
+interface ILoginBtnProps {
   children: React.ReactNode;
   mode?: "modal" | "redirect";
   asChild?: boolean;
 }
 
-export const LoginBtn = ({ children, mode = "redirect", asChild }: LoginBtnProps) => {
+export const LoginBtn = ({ children, mode = "redirect", asChild }: ILoginBtnProps) => {
   const router = useRouter();
+
   const handleLogin = () => {
     router.push("/auth/login");
   }
