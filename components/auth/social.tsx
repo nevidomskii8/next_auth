@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 
 export const Social = () => {
   return (
-   <div className="felx items-center w-full gap-x-4">
+   <div className="felx items-center w-full justify-between gap-x-3">
      <Button
        size="lg"
        className="w-1/2"
