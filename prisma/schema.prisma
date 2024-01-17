@@ -17,7 +17,8 @@ model User {
   email String? @unique
   emailVerified DateTime?
   image String?
-  account: Account[]?
+  password String?
+  account Account[]
 }
 
 model Account {
