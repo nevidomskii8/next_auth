@@ -4,7 +4,7 @@ import type { NextAuthConfig } from "next-auth"
 import Credentials from "next-auth/providers/credentials"
 
 import { LoginSchema } from "@/schemas";
-import { getUserById } from "@/data/user";
+import { getUserByEmail } from "@/data/user";
 
 export default {
   providers: [
@@ -15,7 +15,7 @@ export default {
 
         if (validatedFields.success) {
           const { email, password } = validatedFields.data;
-          const user = await getUserById(email);
+          const user = await getUserByEmail(email);
 
           if (!user || !user.password) return null
 
